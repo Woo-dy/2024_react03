@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './component/Header';
 import DayList from './component/DayList';
 import Day from './component/Day';
+import CreateWord from './component/CreateWord';
+import CreateDay from './component/CreateDay';
 
 function App() {
    return (
@@ -15,6 +17,8 @@ function App() {
                {/* 동적 라우팅 */}
                {/* /day/:day == /day/1 같은 의미이다. */}
                <Route path='/day/:day' element={<Day />} />
+               <Route path='/create_word' element={<CreateWord />} />
+               <Route path='/create_day' element={<CreateDay />} />
             </Routes>
          </div>
       </BrowserRouter>
